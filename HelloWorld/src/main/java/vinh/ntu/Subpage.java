@@ -26,13 +26,16 @@ public class Subpage extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String value1 = request.getParameter("Tri");
-		String value2 = request.getParameter("Vinh");
-		PrintWriter traVe = response.getWriter();
-		traVe.append("Toi ten la ");
-		traVe.append(value1);
-		traVe.append(value2);
-	}
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String value1 = request.getParameter("param1");  
+        String value2 = request.getParameter("param2"); 
+        
+    
+        PrintWriter traVe = response.getWriter();
+        traVe.append("Gia tri tham so param1 =");
+        traVe.append(value1);
+        traVe.append("Gia tri tham so param2 =");
+        traVe.append(value2);
+    }
 
 }
