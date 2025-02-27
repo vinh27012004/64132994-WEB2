@@ -32,7 +32,7 @@ public class Subpage extends HttpServlet {
         
     
         PrintWriter traVe = response.getWriter();
-        traVe.append("Gia tri tham so param1 =");
+        traVe.append("Gia tri tham so param1 = ");
         traVe.append(value1);
         traVe.append("Gia tri tham so param2 =");
         traVe.append(value2);
