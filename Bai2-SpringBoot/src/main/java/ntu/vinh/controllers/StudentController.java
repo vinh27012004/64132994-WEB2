@@ -11,7 +11,7 @@ public class StudentController {
 	@GetMapping("/student")
     public String studentInfo(Model model) {
         // Tạo đối tượng sinh viên
-        Student student = new Student("SV001", "Nguyễn Văn A", 2002, "Nam");
+        Student student = new Student("64132994", "Phạm Nguyễn Trí Vinh", 2004, "Nam");
 
         // Đưa dữ liệu vào Model để truyền sang View
         model.addAttribute("student", student);
