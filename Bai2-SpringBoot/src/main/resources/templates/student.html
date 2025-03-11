@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Thông Tin Sinh Viên</title>
 </head>
 <body>
-
+    <h2>Thông Tin Sinh Viên</h2>
+    <table border="1">
+        <tr>
+            <th>Mã số sinh viên</th>
+            <td th:text="${student.mssv}"></td>
+        </tr>
+        <tr>
+            <th>Họ và tên</th>
+            <td th:text="${student.hoTen}"></td>
+        </tr>
+        <tr>
+            <th>Năm sinh</th>
+            <td th:text="${student.namSinh}"></td>
+        </tr>
+        <tr>
+            <th>Giới tính</th>
+            <td th:text="${student.gioiTinh}"></td>
+        </tr>
+    </table>
 </body>
 </html>
