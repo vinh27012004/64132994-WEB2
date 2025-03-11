@@ -1,11 +1,12 @@
 package ntu.vinh.controllers;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import ntu.vinh.models.Student;
 
-@Controllers
+@Controller
 public class StudentController {
 	@GetMapping("/student")
     public String studentInfo(Model model) {
