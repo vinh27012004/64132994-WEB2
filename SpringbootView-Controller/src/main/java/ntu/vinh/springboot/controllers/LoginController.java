@@ -22,7 +22,6 @@ public class LoginController {
             @RequestParam String password,
             Model model) {
 
-        // Simple authentication logic (for demonstration purposes)
         if ("admin".equals(username) && "admin".equals(password)) {
             model.addAttribute("message", "Đăng nhập thành công");
         } else {
