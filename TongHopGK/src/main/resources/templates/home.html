@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+
+<!-- Header -->
+<div th:replace="fragments/header :: header"></div>
+
+<!-- Nội dung và cột ảnh -->
+<div class="container">
+    <div class="content">
+        <h1>Welcome to the Home Page!</h1>
+        <p>Nội dung chính ở đây...</p>
+    </div>
+
+    <!-- Fragment cột ảnh -->
+    <div th:replace="fragments/right-column :: rightColumn"></div>
+</div>
+
+<!-- Footer -->
+<div th:replace="fragments/footer :: footer"></div>
 
 </body>
 </html>

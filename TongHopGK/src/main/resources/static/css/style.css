@@ -1,0 +1,41 @@
+/* Header */
+.header-background {
+    background: url('/images/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    color: white;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    padding: 20px;
+}
+.content {
+    flex: 3;
+    padding-right: 20px;
+}
+.right-column {
+    width: 250px;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 10px;
+}
+.right-column img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
