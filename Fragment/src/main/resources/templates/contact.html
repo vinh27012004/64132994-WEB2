@@ -1,0 +1,16 @@
+<!-- templates/contact.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contact - My Website</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <h2>Contact Us</h2>
+    <p>Email: contact@mywebsite.com</p>
+
+    <div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
