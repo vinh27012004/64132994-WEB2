@@ -9,7 +9,6 @@ public class TopicController {
 
     @GetMapping("/topics")
     public String getTopics(Model model) {
-        // Logic to retrieve topics can be added here
-        return "topic"; // Returns the topic.html template
+        return "topics";
     }
 }

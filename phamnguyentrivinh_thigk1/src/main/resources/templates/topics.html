@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topic Management</title>
-    <link rel="stylesheet" th:href="@{/css/styles.css}"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" th:href="@{/css/style.css}"> <!-- Link to your CSS file -->
 </head>
 <body>
     <div class="container">
@@ -27,7 +27,7 @@
                         </thead>
                         <tbody>
                             <!-- Loop through topics and display them here -->
-                            <tr th:each="topic : ${topics}">
+                            <tr th:each="topicss : ${topics}">
                                 <td th:text="${topic.id}"></td>
                                 <td th:text="${topic.topicName}"></td>
                                 <td th:text="${topic.topicDescription}"></td>
