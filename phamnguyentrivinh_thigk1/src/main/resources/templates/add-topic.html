@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Topic</title>
+</head>
+<body>
+    <h1>Add Topic</h1>
+    <form action="/topics/add" method="post">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" required>
+        <label for="topicName">Name:</label>
+        <input type="text" id="topicName" name="topicName" required>
+        <label for="topicDescription">Description:</label>
+        <input type="text" id="topicDescription" name="topicDescription" required>
+        <label for="supervisorId">Supervisor ID:</label>
+        <input type="number" id="supervisorId" name="supervisorId" required>
+        <label for="topicType">Type:</label>
+        <input type="text" id="topicType" name="topicType" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

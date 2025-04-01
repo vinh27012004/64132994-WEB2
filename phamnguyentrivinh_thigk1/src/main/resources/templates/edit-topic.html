@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Topic</title>
+</head>
+<body>
+    <h1>Edit Topic</h1>
+    <form action="/topics/edit" method="post">
+        <input type="hidden" name="id" th:value="${topic.id}">
+        <label for="topicName">Name:</label>
+        <input type="text" id="topicName" name="topicName" th:value="${topic.topicName}" required>
+        <label for="topicDescription">Description:</label>
+        <input type="text" id="topicDescription" name="topicDescription" th:value="${topic.topicDescription}" required>
+        <label for="supervisorId">Supervisor ID:</label>
+        <input type="number" id="supervisorId" name="supervisorId" th:value="${topic.supervisorId}" required>
+        <label for="topicType">Type:</label>
+        <input type="text" id="topicType" name="topicType" th:value="${topic.topicType}" required>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
