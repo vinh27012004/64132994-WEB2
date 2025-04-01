@@ -9,5 +9,4 @@ public class PhamnguyentrivinhThigk1Application {
     public static void main(String[] args) {
         SpringApplication.run(PhamnguyentrivinhThigk1Application.class, args);
     }
-
 }
