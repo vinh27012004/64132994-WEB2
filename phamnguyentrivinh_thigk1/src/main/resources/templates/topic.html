@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Management</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <header th:replace="fragments/header :: header"></header>
+        <div class="main-content">
+            <aside th:replace="fragments/sidebar :: sidebar"></aside>
+            <div class="content">
+                <h1>Topic Management</h1>
+                <div>
+                    <h2>Topics</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Topic Name</th>
+                                <th>Description</th>
+                                <th>Supervisor ID</th>
+                                <th>Topic Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Loop through topics and display them here -->
+                            <tr th:each="topic : ${topics}">
+                                <td th:text="${topic.id}"></td>
+                                <td th:text="${topic.topicName}"></td>
+                                <td th:text="${topic.topicDescription}"></td>
+                                <td th:text="${topic.supervisorId}"></td>
+                                <td th:text="${topic.topicType}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer th:replace="fragments/footer :: footer"></footer>
+    </div>
+</body>
+</html>

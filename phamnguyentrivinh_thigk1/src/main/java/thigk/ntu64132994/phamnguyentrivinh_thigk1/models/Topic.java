@@ -1,4 +1,4 @@
-package thigk.ntu64132994.phamnguyentrivinh_thigk1;
+package thigk.ntu64132994.phamnguyentrivinh_thigk1.models;
 
 public class Topic {
     private int id;
