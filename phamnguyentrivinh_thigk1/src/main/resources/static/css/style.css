@@ -9,7 +9,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh;  
     background-color: #f4f4f9;
     color: #333;
 }
@@ -21,7 +21,6 @@ header {
     padding: 1rem;
     text-align: center;
 }
-
 header h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -53,11 +52,15 @@ header nav ul li a:hover {
     color: white;
     padding: 1rem;
     width: 200px;
-    height: 100%;
-    position: fixed;
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    height: 100vh; /* Full height */
+    position: sticky;
     top: 0;
-    left: 0;
-    overflow-y: auto;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Take up remaining space */
 }
 
 .sidebar h2 {
@@ -75,16 +78,23 @@ header nav ul li a:hover {
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline;         
 }
 
 /* Main content styles */
-.main-content {
+.main-container {
     display: flex;
-    margin-left: 200px; /* Matches the sidebar width */
-    padding: 1rem;
-    flex: 1;
+    min-height: 100vh; /* Full height of the viewport */
 }
+
+.main-content {
+    flex: 1; /* Take up remaining vertical space */
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 .content {
     flex: 1;
@@ -100,9 +110,8 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: auto;
 }
 
 footer p {
-    margin: 0;
-}
+    margin: 0;  
+}   

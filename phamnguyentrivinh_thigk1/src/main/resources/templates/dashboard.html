@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Trang Chủ</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <div class="container">
-        <header th:replace="fragments/header.html"></header>
-        <div class="main-content">
-            <aside th:replace="fragments/sidebar.html"></aside>
-            <div class="content">
-                <h1>Dashboard</h1>
-                <p>Welcome to the dashboard!</p>
-                <!-- Additional dashboard content can go here -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" th:replace="fragments/sidebar.html"></aside>
+
+        <!-- Content Container -->
+        <div class="content-container">
+  x          <!-- Header -->
+            <header th:replace="fragments/header.html"></header>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <h1>Welcome to the Main Content</h1>
+                <p>This is where your main content goes.</p>
             </div>
+
+            <!-- Footer -->
+            <footer th:replace="fragments/footer.html"></footer>
         </div>
-        <footer th:replace="fragments/footer.html"></footer>
     </div>
 </body>
 </html>
