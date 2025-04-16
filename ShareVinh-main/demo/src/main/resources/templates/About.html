@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .about-content {
+            padding: 20px;
+        }
+        .about-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .info-item {
+            margin-bottom: 15px;
+        }
+        .info-item i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Logo -->
+    <div th:replace="Fragment :: logo"></div>
+
+    <!-- Include Header -->
+    <div th:replace="Fragment :: header"></div>
+
+    <!-- Content -->
+    <div class="container mt-4">
+        <div class="row align-items-center">
+            <!-- Thông tin cá nhân -->
+            <div class="col-md-7 about-content">
+                <h2>Về Tôi</h2>
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <strong>Họ và tên:</strong> Nguyễn Thanh Nghĩa
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-id-card"></i>
+                    <strong>MSSV:</strong> 21ITxxx
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <strong>Khoa:</strong> Công nghệ thông tin
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-university"></i>
+                    <strong>Trường:</strong> Đại học Nha Trang
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <strong>Email:</strong> nghia.nt@example.com
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <strong>Số điện thoại:</strong> 0123456789
+                </div>
+                <p class="mt-4">
+                    Tôi là một sinh viên đam mê lập trình và công nghệ thông tin. 
+                    Tôi luôn cố gắng học hỏi và phát triển bản thân trong lĩnh vực này.
+                </p>
+            </div>
+            <!-- Ảnh đại diện -->
+            <div class="col-md-5 text-center">
+                <img src="https://scontent.fdad3-3.fna.fbcdn.net/v/t39.30808-6/486119833_1047384924090870_1986483786911910474_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEOPkgyHnIVmx8wJxs-ODx_S5xy2gop6YdLnHLaCinph22JFdwHXsjVpKLAEcI5jtxfmgl3uFe6yg8KE-MQpEA_&_nc_ohc=svg7jic6ajYQ7kNvgH-pk7J&_nc_oc=Adl033uBixjDYmqB48gMiIW2Xhurquog9ugUmccRe6zU3-osYdXuMRWKPs0P6aZGpoO9N4-rG-bKLdCAKm00YsA7&_nc_zt=23&_nc_ht=scontent.fdad3-3.fna&_nc_gid=5CxRJDU2SqoWwxQ9ItpBvg&oh=00_AYE3L_PbUYPZ_h1nbYYK6tQEBAoEuslhdk1i3G8eqa9_gw&oe=67F044A8" 
+                     alt="Profile Photo" 
+                     class="profile-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <div th:replace="Fragment :: footer"></div>
+
+    <!-- Include Scripts -->
+    <div th:replace="Fragment :: scripts"></div>
+</body>
+</html>

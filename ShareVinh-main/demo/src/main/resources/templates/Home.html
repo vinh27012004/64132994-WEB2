@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Include Logo -->
+    <div th:replace="Fragment :: logo"></div>
+
+    <!-- Include Header -->
+    <div th:replace="Fragment :: header"></div>
+
+    <!-- Include Content -->
+    <div th:replace="Fragment :: content"></div>
+
+    <!-- Include Footer -->
+    <div th:replace="Fragment :: footer"></div>
+
+    <!-- Include Scripts -->
+    <div th:replace="Fragment :: scripts"></div>
+</body>
+</html>

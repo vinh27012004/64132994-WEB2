@@ -1,41 +1,49 @@
-/* Header */
-.header-background {
-    background: url('/images/header-bg.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 20px;
-    color: white;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
 }
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
+
+header {
+    background-color: #4CAF50;
     color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
+header nav a:hover {
+    text-decoration: underline;
 }
 
-/* Layout */
-.container {
-    display: flex;
-    padding: 20px;
+h2 {
+    color: #4CAF50;
+    margin-top: 20px;
 }
-.content {
-    flex: 3;
-    padding-right: 20px;
+
+p {
+    line-height: 1.6;
 }
-.right-column {
-    width: 250px;
-    background-color: #f9f9f9;
+
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 10px;
-}
-.right-column img {
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+}
+
+.container {
+    padding: 20px;
 }

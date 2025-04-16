@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About - My Website</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="list.html">List</a>
-        <a href="addnew.html">Add New</a>
-    </nav>
+    <div th:replace="fragments/header :: header"></div>
 
-    <h1>About Page</h1>
-    <p>This is the about page content.</p>
+    <h2>About Us</h2>
+    <p>We build modern web applications with Spring Boot.</p>
 
-    <footer>
-        <p>© 2025 Your Website</p>
-    </footer>
+    <div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>

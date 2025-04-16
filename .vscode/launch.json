@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TongHopGkApplication<TongHopGK>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ntu.vinh.controllers.TongHopGkApplication",
+            "projectName": "TongHopGK",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PhamnguyentrivinhThigk1Application<phamnguyentrivinh_thigk1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "thigk.ntu64132994.phamnguyentrivinh_thigk1.PhamnguyentrivinhThigk1Application",
+            "projectName": "phamnguyentrivinh_thigk1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

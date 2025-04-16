@@ -1,14 +1,21 @@
 package ntu.vinh.controllers;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+// Thay package theo đúng project của bạn
+
 @Controller
 public class HomeController {
-	@GetMapping("/")
+
+    private final List<SinhVien> studentList = new ArrayList<>();
+
+    @GetMapping("/")
     public String home() {
         return "home";
     }
@@ -20,18 +27,20 @@ public class HomeController {
 
     @GetMapping("/list")
     public String list(Model model) {
-        List<SinhVien> listSv = Arrays.asList(
-            new SinhVien("SV001", "Nguyễn Văn A", 8.0),
-            new SinhVien("SV002", "Trần Thị B", 7.5),
-            new SinhVien("SV003", "Lê Văn C", 9.0)
-        );
-        model.addAttribute("dssv", listSv);
-        model.addAttribute("content", "list");
-        return "layout";
+        model.addAttribute("students", studentList);
+        return "list";
     }
 
     @GetMapping("/addnew")
-    public String addNew() {
+    public String showAddForm() {
         return "addnew";
+    }
+
+    @PostMapping("/addnew")
+    public String addStudent(@RequestParam String mssv,
+                             @RequestParam String hoTen,
+                             @RequestParam double diemTb) {
+        studentList.add(new SinhVien(mssv, hoTen, diemTb));
+        return "redirect:/list";
     }
 }

@@ -14,7 +14,7 @@ public class TruyenHoTen {
 		return "v1";
 	}
 	
-	@GetMapping("/v2")
+	@PostMapping("/v2")
 	public String handleTruyenHoTen(
 			@RequestParam String hoTen,
 			Model model) {
