@@ -30,6 +30,7 @@ header nav ul {
     display: flex;
     justify-content: center;
     margin-top: 0.5rem;
+
 }
 
 header nav ul li {
@@ -61,13 +62,22 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: column;
     flex: 1; /* Take up remaining space */
+} 
+.sidebar img{
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
 }
-
 .sidebar h2 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
-
+.sidebar ul{
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
 .sidebar ul li {
     margin-bottom: 0.5rem;
 }
