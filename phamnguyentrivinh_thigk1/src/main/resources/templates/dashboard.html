@@ -3,65 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ</title>
+    <title>Custom Layout</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <div class="main-container">
-        <!-- Sidebar -->
-        <aside class="sidebar" th:replace="fragments/sidebar.html"></aside>
+    <div class="layout-container">
+        <!-- Header -->
+        <header th:replace="fragments/header.html"></header>
 
-        <!-- Content Container -->
-        <div class="content-container">
-            <!-- Header -->
-            <header th:replace="fragments/header.html"></header>
+            <!-- Sidebar -->
+            <aside class="sidebar" th:replace="fragments/sidebar.html"></aside>
 
-            <!-- Main Content -->
-            <div class="main-content">
-                <h1>Welcome to the Main Content</h1>
+            <!-- Main Content --> /
+            <main class="main-content">
+                <h1>Main Content</h1>
                 <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-                <p>This is where your main content goes.</p>
-            </div>
+                <p>Scroll this section to see the effect.</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+            </main>
 
-            <!-- Footer -->
-            <footer th:replace="fragments/footer.html"></footer>
-        </div>
+        <!-- Footer -->
+        <footer th:replace="fragments/footer.html"></footer>
     </div>
 </body>
 </html>

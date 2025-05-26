@@ -20,49 +20,33 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    flex-shrink: 0;
+    margin-left: 200px; /* Add margin to avoid overlap with sidebar */
+    z-index: 4; /* Ensure it appears below the sidebar */
+    position: relative;
 }
+
 header h1 {
-    margin: 0;
     font-size: 1.5rem;
+    text-align: right;
 }
 
-header nav ul {
+.content-container {
     display: flex;
-    justify-content: center;
-    margin-top: 0.5rem;
-
+    flex-direction: column;
+    flex: 1; /* Take up remaining space */
 }
-
-header nav ul li {
-    margin: 0 1rem;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Sidebar styles */
 .sidebar {
     background-color: #343a40;
     color: white;
     padding: 1rem;
     width: 200px;
-    flex-shrink: 0; /* Prevent sidebar from shrinking */
     height: 100vh; /* Full height */
-    position: sticky;
-    top: 0;
+    position: fixed; /* Fixed positioning to keep it static */
+    top: 0; /* Align to the top of the page */
+    left: 0; /* Align to the left of the page */
+    z-index: 10; /* Ensure it appears above other elements */
 }
-.content-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* Take up remaining space */
-} 
 .sidebar img{
     width: 100%;
     height: auto;
@@ -93,8 +77,12 @@ header nav ul li a:hover {
 
 /* Main content styles */
 .main-container {
-    display: flex;
-    min-height: 100vh; /* Full height of the viewport */
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    overflow-y: auto; /* Chỉ cho phép cuộn dọc */
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .main-content {
@@ -103,23 +91,19 @@ header nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 200px; /* Add margin to avoid overlap with sidebar */
+    margin-bottom: 2rem; /* Add space between main-content and footer */
+    position: relative; /* Ensure it respects the layout */
+    z-index: 1; /* Default z-index */
 }
-
-
-.content {
-    flex: 1;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styles */
 footer {
     background-color: #007bff;
     color: white;
     text-align: center;
     padding: 1rem;
+    position: relative; /* Ensure it stays above the sidebar */
+    z-index: 15; /* Higher z-index to appear above the sidebar */
+    margin-top: auto; /* Push footer to the bottom of the page */
 }
 
 footer p {
